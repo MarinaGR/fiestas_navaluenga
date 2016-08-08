@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Fiestas - Ayuntamiento de Navaluenga</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, maximum-scale=2.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<meta name="robots" content="NOINDEX,NOFOLLOW,NOARCHIVE,NOODP,NOSNIPPET">
+		
+		<link href="./styles/estilos_01.css" rel="stylesheet" type="text/css">
+		<link href="./styles/swiper.min.css" rel="stylesheet" type="text/css">
+		
+		<script src="./js/jquery.js"></script>
+		<script src="./js/jqueryui.js"></script>
+		<script src="./js/jquery.ui.touch-punch.min.js"></script>
+		<script src="./js/funciones.js"></script>
+		<script src="./cordova.js"></script>
+		
+		<script>
+		$(document).ready(function() {
+		//document.addEventListener("deviceready", function() {
+			get_program("contenido");			
+		});
+
+		</script>		
+	</head>
+
+	<body class="ov_body_01" onload="onBodyLoad()">
+		<div id="cortina"> </div>
+		
+		<div id="menu">			
+			<span onclick="go_to_page('index');"><i class="fa fa-arrow-left fa-2x"> </i></span>
+			<span onclick="go_to_page('acercade')"><i class="fa fa-info fa-2x"> </i></span>
+		</div>	
+				
+		<div id="contenedor" class="contenedor">
+				
+			<div class="pre_titulo_sec" id="fiestas_title">
+			
+			</div>
+
+			<div class="contenido" id="contenido">					
+						
+			</div>
+
+		</div>
+		
+		<script src="./js/swiper.min.js"></script>
+								
+	</body>
+	
+</html>

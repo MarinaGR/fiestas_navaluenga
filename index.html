@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Fiestas - Ayuntamiento de Navaluenga</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, maximum-scale=2.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<meta name="robots" content="NOINDEX,NOFOLLOW,NOARCHIVE,NOODP,NOSNIPPET">
+		
+		<link href="./styles/estilos_01.css" rel="stylesheet" type="text/css">
+		
+		<script src="./js/jquery.js"></script>
+		<script src="./js/jqueryui.js"></script>
+		<script src="./js/jquery.ui.touch-punch.min.js"></script>
+		<script src="./js/funciones.js"></script>
+		<script src="./cordova.js"></script>
+		
+		<script>
+		//$(document).ready(function() {
+		document.addEventListener("deviceready", function() {
+			$(".portada").css("min-height",	viewport_height-$("#menu").outerHeight()+"px");
+		});
+		
+		$(window).load(function() {
+		
+			setTimeout(function(){
+				window.location.href='programa.html';
+			}, 1500);
+			
+		});
+		
+		function onBackKeyDown()
+		{
+			navigator.app.exitApp();
+			return false;
+		}
+		</script>		
+	</head>
+
+	<body class="ov_body_01" onload="onBodyLoad()">
+		<div id="cortina"> </div>
+
+		<div id="contenedor" onclick="go_to_page('programa')">
+			<div class="portada" >
+				<img src="./images/logos/puente-logo-claro.png" />
+				<img src="./images/general/portada.png" />
+			</div>		
+		</div>		
+	</body>
+	
+</html>
