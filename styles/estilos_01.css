@@ -274,6 +274,11 @@ iframe.iframe_program {
 	background: #E95D10 !important;
 	opacity: 1 !important;
 }
+#big_image img{
+	display: block;
+	margin: auto;
+	max-width: inherit;
+}
 
 .lista_eventos  {
     /*float: left;*/

@@ -17,12 +17,11 @@
 		
 		<script>
 		var identificador=get_var_url("id");
-		var fdate=get_var_url("date");
 		
 		$(document).ready(function() {
 		//document.addEventListener("deviceready", function() {			
 			
-			$(".cupon_02")
+			$("#big_image").html("<img src='./resources/images/"+identificador+".jpg' /><br>");
 			
 		});
 		
@@ -49,12 +48,12 @@
 
 		</div>	-->
 		
-		<div class="cupon_02">
+		<div id="big_image">
 					
 		</div>
 		
 		<div id="menu">			
-			<span onclick="go_to_page('programa')"><i class="fa fa-close fa-2x"> </i></span>
+			<span onclick="go_to_page('programa')"><i class="fa fa-arrow-left fa-2x"> </i></span>
 		</div>	
 			
 	</body>

@@ -247,7 +247,7 @@ function get_program(container) {
 		$("#"+pagina+"-slide").dblclick(function(e) {
 			var num_page=parseInt(e.currentTarget.id);
 			console.log(num_page) ;
-			go_to_page("imagen",num_page)
+			go_to_page("imagen",carpetaPrograma+'/'+num_page);
 		});
 	}	
 	
