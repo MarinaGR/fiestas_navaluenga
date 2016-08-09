@@ -19,10 +19,19 @@
 		<script>
 		var identificador=get_var_url("id");
 		
+		document.addEventListener("deviceready", function() {			
+		});
 		$(document).ready(function() {
-		//document.addEventListener("deviceready", function() {			
+		
 			
-			$("#big_image").html("<img src='./resources/images/"+identificador+".jpg' /><br>");
+			$("#big_image2").html("<img src='./resources/images/"+identificador+".jpg' /><br>");
+			
+			var pinchZoom = require('pinch-zoom')
+			var el = document.querySelector('.wrapper')
+			var pzoom = pinchZoom(el, {
+			  draggable: true,
+			  maxScale: 4
+			});
 			
 		});
 		
@@ -30,13 +39,6 @@
 		{
 			go_to_page('eventos',fdate);
 		}
-		
-		var pinchZoom = require('pinch-zoom')
-		var el = document.querySelector('.wrapper')
-		var pzoom = pinchZoom(el, {
-		  draggable: true,
-		  maxScale: 4
-		})
 		</script>		
 		
 		<style>
@@ -80,7 +82,7 @@
 		
 		
 		<div id="viewport">
-			<div class="wrapper" id="big_image">
+			<div class="wrapper" id="big_image2">
 
 			</div>
 		</div>
