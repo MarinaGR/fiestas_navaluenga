@@ -428,8 +428,8 @@ ul.lista_servicios {
 /*fin lista_servicios*/
 
 .swip_me {
-	color: #fff;
-	background: #ddd;
+	color: #404040;
+	background: #eee;
 	padding: 12px 12px 12px 18px;
 	margin: 5px 0;
 	font-family: "1";
@@ -440,7 +440,7 @@ ul.lista_servicios {
 	width: 50px; 
 	height: 55px;
 	float: left; 
-	margin-top: 5px;
+	margin-top: 2px;
 	margin-right: 20px;
 }
 
@@ -872,6 +872,19 @@ ul.lista_servicios {
 		width: 45%;
 		height: 160px;
 	}
+	
+	.swip_me {
+		padding: 12px 12px 12px 20px;
+		margin: 5px 0;
+		font-family: "1";
+		font-size:0.9em;
+	}
+	.finger-swip {
+		width: 50px; 
+		height: 75px;
+		margin-top: 14px;
+		margin-right: 20px;
+	}
 }
 
 
@@ -900,18 +913,15 @@ ul.lista_servicios {
 		box-sizing: border-box;
 	}
 	.swip_me {
-		color: #fff;
-		background: #ddd;
 		padding: 12px 12px 12px 20px;
 		margin: 5px 0;
 		font-family: "1";
 		font-size:0.9em;
-		position:relative;
 	}
 	.finger-swip {
 		width: 60px; 
-		height: 100px;
-		margin-top: 15px;
+		height: 80px;
+		margin-top: 20px;
 		margin-right: 20px;
 	}
 }

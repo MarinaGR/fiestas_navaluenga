@@ -90,7 +90,9 @@ function onDeviceReady()
 }    
 function onBackKeyDown()
 {
-	if(window.location.href.search(new RegExp("index.html$")) != -1 || window.location.href.search(new RegExp("programa.html$")) != -1) 
+	alert(window.location.href.search(new RegExp("programa.html")));
+	
+	if(window.location.href.search(new RegExp("index.html$")) != -1 || window.location.href.search(new RegExp("programa.html")) != -1) 
 	{		
 		navigator.app.exitApp();
 		return false;
@@ -221,7 +223,7 @@ function get_program(container) {
 	
 	var cadena="";
 					
-	cadena+="<div class='swip_me'><span class='finger-swip'><img src='./images/general/finger-swipe.png' /></span>Para visualizar el programa puedes deslizar el dedo sobre las páginas para ir pasándolas o utilizar la paginación de la parte inferior para acceder directamente.<div class='clear'> </div></div>";
+	cadena+="<div class='swip_me'><span class='finger-swip'><img src='./images/general/finger-swipe-dark.png' /></span>Para visualizar el programa puedes deslizar el dedo sobre las páginas para ir pasándolas o utilizar la paginación de la parte inferior para acceder directamente. Al realizar doble click sobre la imagen se muestra en tamaño grande.<div class='clear'> </div></div>";
 
 	cadena+="<div class='swiper-container contenedor_programa' >";		
 		cadena+="<div class='swiper-wrapper programa_imagenes' id='swiper_container'>";				

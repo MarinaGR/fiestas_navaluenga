@@ -24,7 +24,7 @@
 	
     <!-- Personalización -->
     <preference name="phonegap-version"           value="cli-6.3.0" />      <!-- all: current version of PhoneGap -->	
-    <preference name="orientation"                value="portrait" />       <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="orientation"                value="default" />       <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
     <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
@@ -43,6 +43,8 @@
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.4.0" />
 	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.1.1" />	
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" spec="1.2.2" />
+	
+	<gap:plugin name="cordova-plugin-pinch-zoom" source="npm" spec="0.2.1" />
 
 	<!-- Ocultar barra ios, a partir de ios7-->
 	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" source="pgb" version="1.2.0" />
