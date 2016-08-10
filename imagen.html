@@ -13,7 +13,6 @@
 		<script src="./js/jqueryui.js"></script>
 		<script src="./js/jquery.ui.touch-punch.min.js"></script>
 		<script src="./js/funciones.js"></script>
-		<script src="./js/bundle-pinch-zoom.js"></script>
 		<script src="./cordova.js"></script>
 		
 		<script>
@@ -21,24 +20,11 @@
 		
 		document.addEventListener("deviceready", function() {			
 		});
-		$(document).ready(function() {
-		
+		$(document).ready(function() {		
 			
-			$("#big_image2").html("<img src='./resources/images/"+identificador+".jpg' /><br>");
-			
-			var pinchZoom = require('pinch-zoom')
-			var el = document.querySelector('.wrapper')
-			var pzoom = pinchZoom(el, {
-			  draggable: true,
-			  maxScale: 4
-			});
+			$("#big_image").html("<img src='./resources/images/"+identificador+".jpg' /><br>");
 			
 		});
-		
-		function onBackKeyDown()
-		{
-			go_to_page('eventos',fdate);
-		}
 		</script>		
 		
 		<style>
@@ -81,10 +67,8 @@
 		</div>	-->
 		
 		
-		<div id="viewport">
-			<div class="wrapper" id="big_image2">
-
-			</div>
+		<div id="big_image">
+			
 		</div>
 		
 		<div id="menu">			

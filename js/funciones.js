@@ -223,7 +223,7 @@ function get_program(container) {
 	
 	var cadena="";
 					
-	cadena+="<div class='swip_me'><span class='finger-swip'><img src='./images/general/finger-swipe-dark.png' /></span>Para visualizar el programa puedes deslizar el dedo sobre las páginas para ir pasándolas o utilizar la paginación de la parte inferior para acceder directamente. Al realizar doble click sobre la imagen se muestra en tamaño grande.<div class='clear'> </div></div>";
+	cadena+="<div class='swip_me'><span class='finger-swip'><img src='./images/general/finger-swipe-dark.png' /></span>Para visualizar el programa puedes deslizar el dedo sobre las imágenes para pasar las páginas o utilizar la numeración de la parte inferior para acceder directamente. Al realizar doble click sobre la imagen se muestra en tamaño grande.<div class='clear'> </div></div>";
 
 	cadena+="<div class='swiper-container contenedor_programa' >";		
 		cadena+="<div class='swiper-wrapper programa_imagenes' id='swiper_container'>";				
@@ -238,7 +238,7 @@ function get_program(container) {
 		 cadena+="<div class='swiper-pagination'></div>";
 	cadena+="</div>";
 	
-	cadena+='<br><div class="boton_02" onclick="window.open(\''+url+'\', \'_system\', \'location=yes\'); "><i class="fa fa-book fa-fw fa-lg"></i> DESCARGAR PDF PROGRAMA ACTUAL</div><br>';
+	cadena+='<br><div class="boton_02" onclick="window.open(\''+url+'\', \'_system\', \'location=yes\'); "><i class="fa fa-book fa-fw fa-lg"></i> DESCARGAR PDF</div><br>';
 		
 	$("#fiestas_title").html(fiestas_title);
 	
