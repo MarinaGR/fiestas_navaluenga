@@ -4,7 +4,7 @@
 	<head>
 		<title>Fiestas - Ayuntamiento de Navaluenga</title>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, maximum-scale=3.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<meta name="viewport" content="width=device-width, maximum-scale=2.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 		<meta name="robots" content="NOINDEX,NOFOLLOW,NOARCHIVE,NOODP,NOSNIPPET">
 		
 		<link href="./styles/estilos_01.css" rel="stylesheet" type="text/css">
@@ -20,37 +20,50 @@
 		var identificador=get_var_url("id");
 		var myScroll;
 		
-		function loaded() {
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+		
+		function loaded_DOM() {
 			myScroll = new IScroll('#wrapper', {
 				zoom: true,
 				zoomStart: 1,
 				zoomMin: 1,
-				zoomMax: 3
+				zoomMax: 2,
+				mouseWheel: true,
+				wheelAction: 'zoom',
+				scrollX: true,
+				scrollY: true
 			});
+			
 		}
-		
-		document.addEventListener('DOMContentLoaded', loaded, false);
 		
 		document.addEventListener("deviceready", function() {
 		
-			myScroll = new IScroll('#wrapper', {
-				zoom: true,
-				zoomStart: 1,
-				zoomMin: 1,
-				zoomMax: 3
-			});
 			
 		}, false);
 
 		$(document).ready(function() {					
-			$("#wrapper").html("<img src='./resources/images/"+identificador+".jpg' /><br>");			
+			$("#wrapper").html("<img src='./resources/images/"+identificador+".jpg' /><br>");		
 		});
 		
-		$(window).load(function() {		
-			loaded();			
+		$(window).load(function() {	
+			//setTimeout(function () { myScroll.refresh();  }, 50); 						
+			loaded_DOM();	
+			
 		});		
 		
-		</script>		
+		</script>	
+
+		<style>
+			#wrapper {
+				position: absolute;
+				z-index: 1;
+				top: 0px;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				overflow: hidden;
+			}
+		</style>		
 		
 	</head>
 
@@ -72,7 +85,7 @@
 		
 		
 		<div id="wrapper">
-			
+
 		</div>
 		
 		<div id="menu">			

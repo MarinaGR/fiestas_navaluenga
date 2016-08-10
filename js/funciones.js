@@ -57,6 +57,7 @@ function onBodyLoad()
 			$(".contenedor_ads").css("padding-top","15px");
 		}
 	}
+
 	
 	/*
 	if(publi_banner_top)

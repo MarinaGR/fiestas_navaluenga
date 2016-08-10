@@ -274,10 +274,10 @@ iframe.iframe_program {
 	background: #E95D10 !important;
 	opacity: 1 !important;
 }
-#wrapper img{ 
-	display: block;
+#scroller img{ 
+	/*display: block;
 	margin: auto;
-	max-width: inherit;
+	max-width: inherit;*/
 }
 
 .lista_eventos  {
