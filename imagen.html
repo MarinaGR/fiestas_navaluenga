@@ -28,16 +28,15 @@
 				zoomStart: 1,
 				zoomMin: 1,
 				zoomMax: 2,
-				mouseWheel: true,
-				wheelAction: 'zoom',
+				/*mouseWheel: true,
+				wheelAction: 'zoom',*/
 				scrollX: true,
 				scrollY: true
 			});
 			
 		}
 		
-		document.addEventListener("deviceready", function() {
-		
+		document.addEventListener("deviceready", function() {	
 			
 		}, false);
 
@@ -46,7 +45,7 @@
 		});
 		
 		$(window).load(function() {	
-			//setTimeout(function () { myScroll.refresh();  }, 50); 						
+			setTimeout(function () { myScroll.refresh();  }, 50); 						
 			loaded_DOM();	
 			
 		});		
