@@ -12,30 +12,50 @@
 		<script src="./js/jquery.js"></script>
 		<script src="./js/jqueryui.js"></script>
 		<script src="./js/jquery.ui.touch-punch.min.js"></script>
+		<script src="./js/iscroll-zoom.js"></script>
 		<script src="./js/funciones.js"></script>
 		<script src="./cordova.js"></script>
 		
-		<script type="application/javascript" src="../js/iscroll.js"></script>
-
 		<script type="text/javascript">
 		var identificador=get_var_url("id");
 		var myScroll;
 		
 		function loaded() {
-			myScroll = new iScroll('wrapper', { zoom:true, zoomMax: 3 });
+			myScroll = new IScroll('#wrapper', {
+				zoom: true,
+				zoomStart: 1,
+				zoomMin: 1,
+				zoomMax: 3,
+				mouseWheel: true,
+				wheelAction: 'zoom'
+			});
 		}
 		
 		document.addEventListener('DOMContentLoaded', loaded, false);
 		
+		document.addEventListener("deviceready", function() {
+		
+			myScroll = new IScroll('#wrapper', {
+				zoom: true,
+				zoomStart: 1,
+				zoomMin: 1,
+				zoomMax: 3,
+				mouseWheel: true,
+				wheelAction: 'zoom'
+			});
+			
+		}, false);
+
 		$(document).ready(function() {					
 			$("#wrapper").html("<img src='./resources/images/"+identificador+".jpg' /><br>");			
 		});
 		
 		$(window).load(function() {		
 			loaded();			
-		});
+		});		
+		
 		</script>		
-
+		
 	</head>
 
 	<body class="ov_body_01" onload="onBodyLoad()">
