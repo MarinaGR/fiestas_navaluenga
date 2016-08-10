@@ -4,7 +4,7 @@
 	<head>
 		<title>Fiestas - Ayuntamiento de Navaluenga</title>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, maximum-scale=2.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<meta name="viewport" content="width=device-width, maximum-scale=3.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 		<meta name="robots" content="NOINDEX,NOFOLLOW,NOARCHIVE,NOODP,NOSNIPPET">
 		
 		<link href="./styles/estilos_01.css" rel="stylesheet" type="text/css">
@@ -15,39 +15,27 @@
 		<script src="./js/funciones.js"></script>
 		<script src="./cordova.js"></script>
 		
-		<script>
+		<script type="application/javascript" src="../js/iscroll.js"></script>
+
+		<script type="text/javascript">
 		var identificador=get_var_url("id");
+		var myScroll;
 		
-		document.addEventListener("deviceready", function() {			
+		function loaded() {
+			myScroll = new iScroll('wrapper', { zoom:true, zoomMax: 3 });
+		}
+		
+		document.addEventListener('DOMContentLoaded', loaded, false);
+		
+		$(document).ready(function() {					
+			$("#wrapper").html("<img src='./resources/images/"+identificador+".jpg' /><br>");			
 		});
-		$(document).ready(function() {		
-			
-			$("#big_image").html("<img src='./resources/images/"+identificador+".jpg' /><br>");
-			
+		
+		$(window).load(function() {		
+			loaded();			
 		});
 		</script>		
-		
-		<style>
-		#viewport {
-		  width: 100vw;
-		  height: 100vh;
-		  position: relative;
-		  background-color: #000;
-		  overflow: hidden;
-		}
-		.wrapper {
-		  position: absolute;
-		  left: 0;
-		  right: 0;
-		  top: 50%;
-		  margin-top: -80px;
-		}
-		.wrapper > img {
-		  width: 100%;
-		  display: block;
-		  height: auto;
-		}
-		</style>
+
 	</head>
 
 	<body class="ov_body_01" onload="onBodyLoad()">
@@ -67,14 +55,14 @@
 		</div>	-->
 		
 		
-		<div id="big_image">
+		<div id="wrapper">
 			
 		</div>
 		
 		<div id="menu">			
 			<span onclick="go_to_page('programa')"><i class="fa fa-arrow-left fa-2x"> </i></span>
 		</div>	
-			
+	
 	</body>
 	
 </html>

@@ -90,8 +90,6 @@ function onDeviceReady()
 }    
 function onBackKeyDown()
 {
-	alert(window.location.href.search(new RegExp("programa.html")));
-	
 	if(window.location.href.search(new RegExp("index.html$")) != -1 || window.location.href.search(new RegExp("programa.html")) != -1) 
 	{		
 		navigator.app.exitApp();
