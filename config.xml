@@ -2,9 +2,10 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap   = "http://phonegap.com/ns/1.0"
 		id          = "com.ovnyline.fiestasnavaluenga"
-		version     = "1.0.0" >
+		version     = "1.0.1" >
 		
 	<!-- v1.0.0: Fiestas Navaluenga 2016 -->
+	<!-- v1.0.1: Corrección erratas -->
 
     <name>Fiestas Navaluenga 2016</name>
 
